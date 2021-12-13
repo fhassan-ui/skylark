@@ -70,6 +70,7 @@ func ParseExpr(filename string, src interface{}, mode Mode) (expr Expr, err erro
 		p.in.errorf(p.in.pos, "got %#v after expression, want EOF", p.tok)
 	}
 	p.assignComments(expr)
+	fmt.Println(expr,"!!")
 	return expr, nil
 }
 
